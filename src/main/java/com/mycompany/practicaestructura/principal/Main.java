@@ -31,7 +31,9 @@ public class Main {
         //ap1.verApuesta();
         Main m = new Main();
         m.leerArhivo();
+
         //m.mostarTexto();
+        
 
     }
 
@@ -117,10 +119,17 @@ public class Main {
             
             while ((linea=br.readLine()) != null ) {
                 String datos[] = linea.split(",");
-                nombre = datos[2];
-                //System.out.println("Nombre: "+ nombre);
-                apuesta = new Apuesta(nombre, 10, 11, 20);
-                apuesta.verApuesta();
+                nombre = datos[0];
+                monto = Integer.parseInt(datos[1]);
+                p1 = Integer.parseInt(datos[2]);
+                p2 = Integer.parseInt(datos[3]);
+                System.out.println("Nombre:"+ nombre);
+                System.out.println("Monto:"+ monto);
+                System.out.println("Posicion:"+ p1);
+                apuesta = new Apuesta(nombre, monto, p1, p2);
+                
+
+                
             }
             //textoEntrada = texto+" ";
             JOptionPane.showMessageDialog(null,"Archivo leido correctamente");
@@ -133,5 +142,8 @@ public class Main {
         //return textoEntrada;
         
     }
+    
+
+    
 
 }
