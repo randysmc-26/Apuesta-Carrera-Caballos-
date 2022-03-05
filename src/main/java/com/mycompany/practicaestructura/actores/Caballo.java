@@ -8,32 +8,53 @@ package com.mycompany.practicaestructura.actores;
  *
  * @author randysmc
  */
+
 public class Caballo {
+    private int codigo;
+    private String nombre;
+    private int posicionApuesta;
+    private int posicionLlegada;
     
-    private int id;
-    private int posLlegada;
-    private int x=10;
-    private Caballo[] caballos = new Caballo[x];
     
-    public Caballo(int id){
-        this.id = id;
-    }
-    
-    public int getId() {
-        return id;
+
+    public Caballo(int codigo, String nombre, int posicionApuesta) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.posicionApuesta = posicionApuesta;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getPosLlegada() {
-        return posLlegada;
-    }
-
-    public void setPosLlegada(int posLlegada) {
-        this.posLlegada = posLlegada;
+    public int getCodigo() {
+        return codigo;
     }
     
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getPosicionApuesta() {
+        return posicionApuesta;
+    }
+
+    public void setPosicionApuesta(int posicionApuesta) {
+        this.posicionApuesta = posicionApuesta;
+    }
+
+    public int getPosicionLlegada() {
+        return posicionLlegada;
+    }
+
+    public void setPosicionLlegada(int posicionLlegada) {
+        this.posicionLlegada = posicionLlegada;
+    }
+
 
 }
