@@ -10,7 +10,7 @@ package com.mycompany.practicaestructura.actores;
  */
 public class ListaCaballos {
     
-    Caballo[] competidores;
+    private Caballo[] competidores;
     
     public ListaCaballos(){
         competidores = new Caballo[10];
