@@ -12,14 +12,23 @@ import com.mycompany.practicaestructura.actores.*;
  */
 public class ListaApuestas {
 
-    Apuesta[] apuestas = new Apuesta[100];
-    int contador = 0;
+    private Apuesta[] apuestas = new Apuesta[1000];
+    private int contador = 0;
+    private ListaCaballos competidores;
 
     public ListaApuestas() {
-
+        
     }
+    
+    
+    
+    /*public void ingresarRestulados(int p1, int p2, int p3, int p4, int p5, int p6, int p7, int p8, int p9, int p10){
+        competidores.ingresarLlegada(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10);
+          
+    }*/
 
     public void ingresarApostador(String nombre, int monto, int p1, int p2, int p3, int p4, int p5, int p6, int p7, int p8, int p9, int p10) {
+        //System.out.println("pos1 "+p1 +" pos2 " +p2 +" pos3 "+p3 +" pos4 "+ p4+" pos 5 "+p5);
         apuestas[contador] = new Apuesta(new Persona(contador, nombre, monto));
         apuestas[contador].getCompetidores().getCompetidores()[0].setPosicionApuesta(p1);
         apuestas[contador].getCompetidores().getCompetidores()[1].setPosicionApuesta(p2);
@@ -31,22 +40,25 @@ public class ListaApuestas {
         apuestas[contador].getCompetidores().getCompetidores()[7].setPosicionApuesta(p8);
         apuestas[contador].getCompetidores().getCompetidores()[8].setPosicionApuesta(p9);
         apuestas[contador].getCompetidores().getCompetidores()[9].setPosicionApuesta(p10);
+        
+        
+        apuestas[contador].getCompetidores().getCompetidores()[0].setPosicionLlegada(2);
+        apuestas[contador].getCompetidores().getCompetidores()[1].setPosicionLlegada(4);
+        apuestas[contador].getCompetidores().getCompetidores()[2].setPosicionLlegada(6);
+        apuestas[contador].getCompetidores().getCompetidores()[3].setPosicionLlegada(7);
+        apuestas[contador].getCompetidores().getCompetidores()[4].setPosicionLlegada(10);
+        apuestas[contador].getCompetidores().getCompetidores()[5].setPosicionLlegada(0);
+        apuestas[contador].getCompetidores().getCompetidores()[6].setPosicionLlegada(15);
+        apuestas[contador].getCompetidores().getCompetidores()[7].setPosicionLlegada(20);
+        apuestas[contador].getCompetidores().getCompetidores()[8].setPosicionLlegada(30);
+        apuestas[contador].getCompetidores().getCompetidores()[9].setPosicionLlegada(55);
+       incrementarContador();
+       
 
-
-        //System.out.println(apuestas[contador].getCompetidores());
-        /* apuestas[contador].getCompetidores().competidores[0].setPosicionApuesta(p1);
-        apuestas[contador].getCompetidores().competidores[1].setPosicionApuesta(p2);
-        apuestas[contador].getCompetidores().competidores[2].setPosicionApuesta(p3);
-        apuestas[contador].getCompetidores().competidores[3].setPosicionApuesta(p4);
-        apuestas[contador].getCompetidores().competidores[4].setPosicionApuesta(p5);
-        apuestas[contador].getCompetidores().competidores[5].setPosicionApuesta(p6);
-        apuestas[contador].getCompetidores().competidores[6].setPosicionApuesta(p7);
-        apuestas[contador].getCompetidores().competidores[7].setPosicionApuesta(p8);
-        apuestas[contador].getCompetidores().competidores[8].setPosicionApuesta(p9);
-        apuestas[contador].getCompetidores().competidores[9].setPosicionApuesta(p10);*/
-        //System.out.println("El contador antes del incremento es: "+ contador);
-        incrementarContador();
-        //System.out.println("El contador es: " +contador);
+    }
+    
+    public void ingresarResultados(){
+        
     }
 
     public void incrementarContador() {
@@ -54,26 +66,33 @@ public class ListaApuestas {
     }
 
     public void imprimir() {
+        
         for (int i = 0; i < contador; i++) {
-
-            System.out.println("Mi nombre es: " + apuestas[i].persona.getNombre() + " aposte: Q" + apuestas[i].persona.getMontoApuesta());
+            System.out.println("Nombre: "+ apuestas[i].getPersona().getNombre() + " aposte: Q " + apuestas[i].getPersona().getMontoApuesta());
+            //System.out.println("Mi nombre es: " + apuestas[i].persona.getNombre() + " aposte: Q" + apuestas[i].persona.getMontoApuesta());
             for (int j = 0; j < 10; j++) {
                 System.out.print("Mi caballo: " + apuestas[i].getCompetidores().getCompetidores()[j].getNombre());
                 System.out.println(" quedara en: " + apuestas[i].getCompetidores().getCompetidores()[j].getPosicionApuesta());
+                System.out.println(" lugar de competencia: " +apuestas[i].getCompetidores().getCompetidores()[j].getPosicionLlegada());
             }
             System.out.println("\n\n");
         }
-        /*System.out.println(apuestas[0].persona.getNombre());
-            System.out.println(apuestas[0].persona.getMontoApuesta());
-            System.out.println(apuestas[0].getCompetidores().competidores[0].getPosicionApuesta());
-            System.out.println("Contador: "+contador);
-            System.out.println(apuestas[1].persona.getNombre());
-            System.out.println(apuestas[1].persona.getMontoApuesta());
-            System.out.println(apuestas[1].getCompetidores().competidores[0].getPosicionApuesta());*/
+
+        System.out.println(contador);
     }
 
     public int getContador() {
         return contador;
     }
+
+    public Apuesta[] getApuestas() {
+        return apuestas;
+    }
+
+    public void setApuestas(Apuesta[] apuestas) {
+        this.apuestas = apuestas;
+    }
+    
+    
 
 }
