@@ -20,12 +20,6 @@ public class ListaApuestas {
         
     }
     
-    
-    
-    /*public void ingresarRestulados(int p1, int p2, int p3, int p4, int p5, int p6, int p7, int p8, int p9, int p10){
-        competidores.ingresarLlegada(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10);
-          
-    }*/
 
     public void ingresarApostador(String nombre, int monto, int p1, int p2, int p3, int p4, int p5, int p6, int p7, int p8, int p9, int p10) {
         //System.out.println("pos1 "+p1 +" pos2 " +p2 +" pos3 "+p3 +" pos4 "+ p4+" pos 5 "+p5);
