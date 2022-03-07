@@ -11,9 +11,9 @@ import com.mycompany.practicaestructura.actores.*;
  * @author randysmc
  */
 public class Apuesta {
-    Persona persona;
-    ListaCaballos competidores = new ListaCaballos();
-    int contador = 0;
+    private Persona persona;
+    private ListaCaballos competidores = new ListaCaballos();
+    private int contador = 0;
 
     public Apuesta(Persona persona) {
         this.persona = persona;

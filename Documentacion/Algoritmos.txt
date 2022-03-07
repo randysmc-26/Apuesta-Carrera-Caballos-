@@ -1,0 +1,57 @@
+Algoritmo para ingresar una apuesta
+
+se crea un arreglo con los datos de entrada utilizando el metodo split de la clase String
+
+while(cadena != null){
+    dato[] = str.split(",");
+    dato[n] = nuevoDato (String);
+    dato[m] = nuevoDato (Integer);
+
+    funcion crearUsuario(dato[n], dato[m]);
+}
+
+//Esta funcion recibe como parametros los datos obtenidos del archivo csv
+//guardamos los datos en un arreglo de tamano M e iniciamos un contador
+//Se crean las apuestas con complejidad O(1);
+
+int contador=0;
+funcion crearUsuario(dato[m], dato[n]){
+    arreglo[M] = new arregloApuesta[contador].nombre[m];
+    arreglo[m] = new arregloApuesta[contador].dinero[n];
+    ...
+    ...
+    contador++;
+}
+
+//En otro caso se guarda la informacion con un ciclo for, volviendo la complejidad O(n)
+for(desde i=0, hasta i<tamanio; i++){
+    arreglo[i] = new ArregloApuesta[i].nombre[m]
+}
+
+//
+
+//Funcion para verificar Repetidos
+//Complejidad O(n)
+
+funcion verificarRepetido(){
+    //se inicia con un for para recorrer todo el arreglo
+    for(desde i=0; hasta i< tamanio, i++){
+
+        //se utiliza una condicion en donde se guarda el valor de cada caballo y se compara uno a uno con todos
+        //para comparar todos los caballos se evalua primero si el de la primera posicion es igual a alguno de los demas
+        //luego la segunda posicion con los demas hasta que se revisen todas las posiciones
+
+        if((c1 != c2)&&(c1!=c3)&&(c1!=4)&&(c1!=c5)&&(c1!=c6)&&(c1!=c7)&&(c1!=c8)&&(c1!=c9)&&(c1!=c10))){
+            //y luego otro ciclo con caballo 2
+            if((c2 != c3)&&(c2!=4)&&(c2!=c5)&&(c2!=c6)&&(c2!=c7)&&(c2!=c8)&&(c2!=c9)&&(c2!=c10))){
+                //Luego otro ciclo hasta que 
+                if((c9!= c10)){
+                    //aqui nos aseguramos que ningun caballo se repita y procedemos a crear un nuevo arreglo llamado 
+                    //copiaremos la informacion que tiene cada posicion del arreglo apuesta
+                    arregloValido[contadorValido] = arreglo[i];
+                }
+        }
+    }
+
+    sout    
+}
