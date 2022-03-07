@@ -15,12 +15,36 @@ public class Persona {
     private String nombre;
     private int montoApuesta;
     private int dinero;
+    private int ganancia=0;
+    private int apuestasAcertadas=0;
 
     public Persona(int codigo, String nombre, int montoApuesta) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.montoApuesta = montoApuesta;
+        
     }
+
+    public int getApuestasAcertadas() {
+        return apuestasAcertadas;
+    }
+
+    public void setApuestasAcertadas(int apuestasAcertadas) {
+        this.apuestasAcertadas = apuestasAcertadas;
+    }
+    
+    
+    
+
+    public int getGanancia() {
+        return ganancia;
+    }
+
+    public void setGanancia(int ganancia) {
+        this.ganancia = ganancia;
+    }
+    
+    
 
     public int getCodigo() {
         return codigo;
