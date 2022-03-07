@@ -27,7 +27,7 @@ public class ManejadorApuesta {
     }
     
     public void ingresarResultados(){
-        la.ingresarResultados(2,4,6,7,8,9,1,0,15,18);
+        la.ingresarResultados(1,2,3,4,5,6,7,8,9,10);
     }
     
     public void validarApuesta(){
@@ -39,9 +39,17 @@ public class ManejadorApuesta {
     
     
     public void imprimir(){
-        la.imprimirGeneral();
+        la.imprimirListadoApuestas(la.getApuestas(), la.getContadorIngreso());
         la.verificarApuesta();
-        System.out.println("Estas son las apuestas validadas");
-        la.imprimirValida();
+        System.out.println("Estas son las apuestas validadas\n");
+        
+        la.imprimirListadoApuestas(la.getApuestaValida(), la.getContadorApuestaValida());
+        
+        System.out.println("Apuestas que no fueron validadas");
+        la.imprimirListadoApuestas(la.getApuestaNoValida(), la.getContadorApuestaNoValida());
+        System.out.println("Los resultados");
+        la.calculoDeResultados(la.getApuestaValida());
+        la.imprimirResultados(la.getApuestaValida(), la.getContadorApuestaValida());
+        //la.imprimirResultados(la.getApuestaValida(), contador);
     }
 }
